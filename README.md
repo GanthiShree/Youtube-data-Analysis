@@ -12,7 +12,6 @@ The script can fetch basic information about a YouTube video, including:
 
 - Video
 - Title
-- Description
 - View count
 - Like count
 - Comment count
