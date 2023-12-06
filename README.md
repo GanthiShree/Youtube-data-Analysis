@@ -4,6 +4,8 @@
 
 The `Youtube.py` script is a Python tool designed to retrieve and analyze data from YouTube channels. It utilizes the YouTube Data API to fetch information about a specified channels such as its video,title, description, view count, likes, and comments. The fetched information is stored in  MongoDB database, subsequently migrated to a SQL data warehouse and made accessible for analysis and generates visualizations to represent key statistics and insights within the Streamlit app.
 
+![Local Image](r"C:\Users\GANESHA\Pictures\Screenshots\Screenshot 2023-12-06 082710.png")
+
 ## **Features**
 
 ### **1. Basic Channel Information Retrieval**
@@ -16,7 +18,7 @@ The script can fetch basic information about a YouTube video, including:
 - Like count
 - Comment count
 
-### **3. Data Visualization**
+### **2. Data Visualization**
 
 The script generates visualizations to represent key statistics and insights about the video. This can include charts and graphs to illustrate metrics like views, likes, and comments.
 
@@ -27,12 +29,14 @@ The script generates visualizations to represent key statistics and insights abo
 
 2. **Install Required Packages:**
    - Navigate to the project directory and install the required packages listed below:
-     `pip install google-api-python-client`
-     `pip install pymongo`
-     `pip install pandas`
-     `pip install psycopg2`
-     `pip install streamlit`
-     `pip install plotly`.
+     ```
+         pip install google-api-python-client
+         pip install pymongo
+         pip install pymysql
+         pip install pandas
+         pip install isodate
+         pip install streamlit
+        ```
 
 3. **Obtain API Key:**
    - Visit the [Google Cloud Console](https://console.developers.google.com/).
