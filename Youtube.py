@@ -10,7 +10,7 @@ from streamlit_option_menu import option_menu
 # API connection:
 api_service_name = "youtube"
 api_version = "v3"
-key = "AIzaSyDPnusHFbCmmEvHykqzk55ch2fM5LTleVg"
+key = "YOUR_API_KEY"
 youtube = googleapiclient.discovery.build(
 api_service_name, api_version, developerKey =key) 
 
@@ -24,7 +24,7 @@ myconnection = mongo_db["Channel_Details"]
 # My SQL connection:
 mysql_connection  =  pymysql.connect(host = "127.0.0.1",
                                 user='root',
-                                passwd='Nisha@130899',
+                                passwd='Your password',
                                 database ="Youtube_Data",
                                 autocommit=True)                                
 mysql_cursor  = mysql_connection.cursor()
