@@ -2,34 +2,24 @@
 
 ## **Overview**
 
-The `Youtube.py` script is a Python tool designed to retrieve and analyze data from YouTube videos. It utilizes the YouTube Data API to fetch information about a specified video, such as its title, description, view count, likes, and dislikes. Additionally, the script offers features for sentiment analysis on the comments associated with the video and generates visualizations to represent key statistics and insights.
+The `Youtube.py` script is a Python tool designed to retrieve and analyze data from YouTube channels. It utilizes the YouTube Data API to fetch information about a specified channels such as its video,title, description, view count, likes, and comments. The fetched information is stored in  MongoDB database, subsequently migrated to a SQL data warehouse and made accessible for analysis and generates visualizations to represent key statistics and insights within the Streamlit app.
 
 ## **Features**
 
-### **1. Basic Video Information Retrieval**
+### **1. Basic Channel Information Retrieval**
 
 The script can fetch basic information about a YouTube video, including:
 
+- Video
 - Title
 - Description
 - View count
 - Like count
-- Dislike count
-
-### **2. Sentiment Analysis on Comments**
-
-The tool performs sentiment analysis on the comments of a video to gauge audience reactions. It uses the TextBlob library to analyze the sentiment of each comment and provides an overall sentiment score.
+- Comment count
 
 ### **3. Data Visualization**
 
-The script generates visualizations to represent key statistics and insights about the video. This can include charts and graphs to illustrate metrics like views, likes, and sentiment.
-
-## **Prerequisites**
-
-Before using the script, ensure you have the following installed:
-
-- **Python 3.x:** The script is written in Python, so you need a Python interpreter installed on your machine.
-- **Required Python packages:** The necessary packages are listed in the `requirements.txt` file. You can install them using the command `pip install -r requirements.txt`.
+The script generates visualizations to represent key statistics and insights about the video. This can include charts and graphs to illustrate metrics like views, likes, and comments.
 
 ## **Getting Started**
 
