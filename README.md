@@ -27,7 +27,13 @@ The script generates visualizations to represent key statistics and insights abo
    - Use the `git clone` command to clone the repository to your local machine.
 
 2. **Install Required Packages:**
-   - Navigate to the project directory and install the required Python packages using `pip install -r requirements.txt`.
+   - Navigate to the project directory and install the required packages listed below:
+     `pip install google-api-python-client`
+     `pip install pymongo`
+     `pip install pandas`
+     `pip install psycopg2`
+     `pip install streamlit`
+     `pip install plotly`.
 
 3. **Obtain API Key:**
    - Visit the [Google Cloud Console](https://console.developers.google.com/).
@@ -40,19 +46,38 @@ The script generates visualizations to represent key statistics and insights abo
    - Locate the variable `API_KEY` and replace the placeholder `YOUR_API_KEY` with the API key you obtained.
 
 5. **Run the Script:**
-   - Execute the script using the command `python Youtube.py`.
+   - Execute the script using the command `streamlit run Youtube.py`.
    - Follow the prompts to input the YouTube video URL and choose analysis options.
 
 ## **Usage**
 
-- When you run the script, it will prompt you to input the URL of the YouTube video you want to analyze.
-- The script will then fetch the video information and ask if you want to perform sentiment analysis on the comments or generate visualizations.
+- When you run the script, it will prompt you to input the URL of the YouTube Channel you want to analyze.
+- The script will then fetch the Channel information and displays you the Channel information.
+- You can store retrieved data in  MongoDB database based on user authorization.
+- Users can choose which channel data should store in MongoDB.
+- You can migrate the stored data from MongoDB to MySQL data warehouse
+- To ensure compatibility with a structured format, the data is cleansed using the powerful pandas library.
+- Following data cleaning, the information is segregated into separate tables, including channels, playlists, videos, and comments, utilizing MySQL queries.
 - Follow the on-screen instructions to interact with the script.
+
+**Data Analysis**
+
+The project provides comprehensive data analysis capabilities using Plotly and Streamlit. With the integrated Plotly library, users can create interactive and visually appealing charts and graphs to gain insights from the collected data.
+
+- **Channel Analysis:** Channel analysis includes insights on playlists, videos, subscribers, views, likes, comments, and durations. Gain a deep understanding of the channel's performance and audience engagement through detailed visualizations and summaries.
+
+- **Video Analysis:** Video analysis focuses on views, likes, comments, and durations, enabling both an overall channel and specific channel perspectives. Leverage visual representations and metrics to extract valuable insights from individual videos.
+
+Utilizing the power of Plotly, users can create various types of charts, including line charts, bar charts, scatter plots, pie charts, and more. These visualizations enhance the understanding of the data and make it easier to identify patterns, trends, and correlations.
+
+The Streamlit app provides an intuitive interface to interact with the charts and explore the data visually. Users can customize the visualizations, filter data, and zoom in or out to focus on specific aspects of the analysis.
+
+With the combined capabilities of Plotly and Streamlit, the Data Analysis section empowers users to uncover valuable insights and make data-driven decisions.
 
 ## **Contributing**
 
-If you encounter any issues or have suggestions for improvement, contributions are welcome! You can open an issue to report problems or submit a pull request with proposed changes.
+If you encounter any issues or have suggestions for improvement, contributions are welcome! Please feel free to submit a pull request.
 
 ## **License**
 
-This project is licensed under the MIT License. Refer to the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
