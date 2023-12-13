@@ -10,7 +10,7 @@ from streamlit_option_menu import option_menu
 # API connection:
 api_service_name = "youtube"
 api_version = "v3"
-key = "YOUR_API_KEY"
+key = "AIzaSyDPnusHFbCmmEvHykqzk55ch2fM5LTleVg"
 youtube = googleapiclient.discovery.build(
 api_service_name, api_version, developerKey =key) 
 
@@ -24,7 +24,7 @@ myconnection = mongo_db["Channel_Details"]
 # My SQL connection:
 mysql_connection  =  pymysql.connect(host = "127.0.0.1",
                                 user='root',
-                                passwd='Your password',
+                                passwd='Nisha@130899',
                                 database ="Youtube_Data",
                                 autocommit=True)                                
 mysql_cursor  = mysql_connection.cursor()
@@ -528,7 +528,7 @@ if selected == "Views":
                 result_df = pd.read_sql(query, mysql_connection)
                 if selected_query == "2. Which channels have the most number of videos, and how many videos do they have?":
                     # Bar chart for question 2
-                    fig_bar_channel_videos, ax_bar_channel_videos = plt.subplots()
+                    fig_bar_channel_videos, ax_bar_channel_videos = plt.subplots(figsize=(5, 3))
                     ax_bar_channel_videos.bar(result_df["Channel_Name"], result_df["NumberOfVideos"], color="skyblue")
                     ax_bar_channel_videos.set_ylabel("Number of Videos")
                     ax_bar_channel_videos.set_title("Channels with the Most Number of Videos")
@@ -569,3 +569,10 @@ if selected == "Views":
 
             except Exception as e:
                 st.error(f"An error occurred: {e}")
+    
+    if st.button("Exit"):
+        
+        mongo_db["Channel_Details"].delete_many({})
+        mysql_cursor.execute("DROP TABLE IF EXISTS channel, playlist, video, comment")
+        mysql_connection.commit()
+    st.caption("###### Hint: pressing Exit will delete all data from MongoDb and SQL")
