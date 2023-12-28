@@ -80,6 +80,3 @@ With the combined capabilities of Plotly and Streamlit, the Data Analysis sectio
 
 If you encounter any issues or have suggestions for improvement, contributions are welcome! Please feel free to submit a pull request.
 
-## **License**
-
-This project is licensed under the MIT License.
