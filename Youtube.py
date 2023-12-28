@@ -569,10 +569,3 @@ if selected == "Views":
 
             except Exception as e:
                 st.error(f"An error occurred: {e}")
-    
-    if st.button("Exit"):
-        
-        mongo_db["Channel_Details"].delete_many({})
-        mysql_cursor.execute("DROP TABLE IF EXISTS channel, playlist, video, comment")
-        mysql_connection.commit()
-    st.caption("###### Hint: pressing Exit will delete all data from MongoDb and SQL")
